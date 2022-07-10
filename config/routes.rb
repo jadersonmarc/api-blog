@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   as :user do
     post "api/registrations" => "api/registrations#create", as: "create_registrations"
+    get "api/sessions" => "api/sessions#new", as: "new_session"
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   namespace :api do
