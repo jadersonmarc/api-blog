@@ -1,5 +1,4 @@
 class Api::RegistrationsController < Devise::RegistrationsController
-  #skip_after_action :verify_authorized, only: [:create]
   skip_before_action :verify_authenticity_token
   def create
     user = User.new(user_params)
